@@ -63,18 +63,18 @@ body {
 			 {% if message.sender == user %}
 
 					<div class="alert alert-warning">
-					<b><p>sender ---->{{message.sender}}</p></b>
+					<b><p>Sender  :  {{message.sender}}(you)</p></b>
 						<br>
 					{% if message.title %}
-				<p>		message received ---->{{message.title}}</p>
+				<p>		Message sent  :  {{message.title}}</p>
 					<br>
 					{% endif %}
 
 
 					{% if message.receiver %}
-					<b><p>>receiver ---> {{message.receiver}}</p></b>
+					<b><p>Receiver :  {{message.receiver}}</p></b>
 					<br>
-				<p>	Time --->{{message.date1}} GMT + 5:30</p>
+				<p>	Time :  {{message.date1}} GMT + 5:30</p>
 						</div>
 					{% endif %}
 
@@ -83,17 +83,17 @@ body {
 
 			 {% else %}
 					<div class="alert alert-success">
-					<b><p>sender ---->{{message.sender}}</p></b>
+					<b><p>Sender : {{message.sender}}</p></b>
 					<br>
 					{% if message.title %}
-				<p>	message received ---->{{message.title}}</p>
+				<p>	Message received : {{message.title}}</p>
 					<br>
 					{% endif %}
 
 					{% if message.receiver %}
-					<b><p>Receiver ---> {{message.receiver}}<p/></b>
+					<b><p>Receiver :  {{message.receiver}} (you)<p/></b>
 					<br>
-				<p>	Time --->{{message.date1}} GMT + 5:30</p>
+				<p>	Time  :  {{message.date1}} GMT + 5:30</p>
 
 					</div>
 					{% endif %}
