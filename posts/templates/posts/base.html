@@ -3,10 +3,12 @@
 <style>
     #p1 {background-color:#3F729B ;
         color: white;
-        margin-top: 0vw;
+        margin-top: 0.5vh;
     }
     #p2 {background-color:#1C2331 ;
-      height: 8vh;}
+      height: 13vh;
+      margin-top: 0.5vh;
+    }
     #i2
     {
         margin-left :1vw;
@@ -17,7 +19,8 @@
     {
       font-size: 0.9em;
       margin-top: 0vw;
-      margin-left: 1vw;
+      margin-left: 1vh;
+      margin-top: 1vh;
     }
   #p4
   {
@@ -26,6 +29,13 @@
     margin-left: auto;
     margin-right: auto;
 
+  }
+  .flex-container{
+    display: flex;
+    align-items: center;
+    margin :2vw;
+    align-content: space-between;
+     flex-wrap: wrap;
   }
 
 @media only screen and (max-width: 800px)
@@ -43,10 +53,11 @@
   #p2 {
       justify-content:flex-start;
     background-color:#1C2331 ;
-      height: 22vh;}
+      height: 20vh;}
   #p3
   {
     font-size: 0.7em;
+    margin-top: 1.5vh;
   }
   #p4
   {
@@ -54,6 +65,8 @@
     justify-content: end;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
   }
 }
 </style>
@@ -83,11 +96,11 @@
 
 {% if user.is_authenticated %}
 
-<div >
 
-<div   >
 
-<nav id="p2" class="navbar ">
+<div id ="p2" class="flex-container"  >
+
+
 
 <ul class="nav " id ="p4">
       <li class="nav-item">
@@ -123,7 +136,7 @@
 
               <h2 class="nav-item"><button type="button" class="btn btn-default" >  </h2>
           <li class="nav-item"> <form action="{% url 'logoutuser' %}" method="POST">
-            <form>
+
               {% csrf_token %}
               <button  id="p3" class="btn btn-danger" type="submit">LOGOUT</button>
 
@@ -136,17 +149,18 @@
 
 
 
-</nav>
+
+
+
+
 
 
 
 </div>
 
-
-
 {% else %}
-<div>
 
+<div>
 <nav class="navbar navbar-dark bg-dark">
 
 <ul class="nav justify-content-end">
