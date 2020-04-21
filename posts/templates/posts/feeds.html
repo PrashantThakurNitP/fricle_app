@@ -22,14 +22,36 @@ body {
   background-size: 100vw 100vh;
   margin-top: 0vw;
 }
+@media only screen and (max-width: 800px) {
+  #i2{
+   
+   margin-left: -20vw;
+   width: 90vw;
+  }
+  #i4{
+   
+   margin-left: -17vw;
+   width: 91vw;
+  }
+}
+#i3{
+   
+   margin-left: 16vw;
+   width: 67vw;
+  }
+#i1{
+   
+   margin-left: 13vw;
+   width: 70vw;
+  }
 </style>
 <body>
-<div class="container text-center">
-<h1 class="container p-3 my-3 bg-dark text-white">POSTS</h1>
+<div id = "i3" class="container text-center">
+<h1 id ="i4" class="container p-3 my-3 bg-dark text-white">POSTS</h1>
 </div>
-<ul>
+<ul id="i1">
 	{% for feed in feeds %}
-            <div class="jumbotron text-center">
+            <div id ="i2" class="jumbotron text-center">
       	<h2><b>{{feed.title}} </b></h2><!-- way to highlight if impotant -->
 
                   @ {{feed.user_new}}

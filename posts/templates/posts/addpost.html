@@ -25,6 +25,42 @@ body {
 	color :white;
 	background-position: blue
 }
+
+
+#i4
+{
+	color: white;
+
+}
+  #i2{
+   width: 50vw;
+   margin-left: 30vw;
+   color :white;
+
+  }
+  #i3
+  {
+  	 width: 50vw;
+   margin-left: 30vw;
+   color :white;
+  }
+@media only screen and (max-width: 800px) {
+    #i4
+    {
+        margin-left :-4vw;
+    }
+  #i2{
+   width: 80vw;
+   margin-left: -8vw;
+   color :white;
+  }
+  #i3
+  {
+  	 width: 80vw;
+   margin-left: -8vw;
+   color :white;
+  }
+}
 </style>
 
 <div class="container text-center">
@@ -54,16 +90,16 @@ body {
 
 
 						  <div class="form-group row">
-							    <label for="staticEmail" id="i3" class="col-sm-2 col-form-label">Title</label>
-							    <div class="col-sm-10">
+							    <label for="staticEmail" id="i4" class="col-sm-2 col-form-label">Title</label>
+							    <div id = "i2" class="col-sm-10">
 							      {{form.title}}
 							    </div>
 							  </div>
 
 
  								<div class="form-group row">
-							    <label for="inputPassword" id ="i3" class="col-sm-2 col-form-label">Description</label>
-							    <div class="col-sm-10">
+							    <label for="inputPassword" id ="i4" class="col-sm-2 col-form-label">Description</label>
+							    <div id="i3" class="col-sm-10">
 							     	{{form.description}}
 							    </div>
 
@@ -73,11 +109,11 @@ body {
 
 								<div class="form-check">
 
-							  <label id ="i3"class="form-check-label" for="defaultCheck1">
+							  <label id ="i4"class="form-check-label" for="defaultCheck1">
 							  Image
 							  </label>
 							  <h2>    </h2>
-							  {{form.image}}
+                <div id ="i3">{{form.image}}</div>
 								</div>
 
 						 	 </div>

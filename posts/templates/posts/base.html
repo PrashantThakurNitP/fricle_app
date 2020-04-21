@@ -3,13 +3,59 @@
 <style>
     #p1 {background-color:#3F729B ;
         color: white;
+        margin-top: 0vw;
     }
-    #p2 {background-color:#1C2331 ;}
+    #p2 {background-color:#1C2331 ;
+      height: 8vh;}
     #i2
     {
         margin-left :1vw;
         margin-right :1vw;
+
     }
+    #p3
+    {
+      font-size: 0.9em;
+      margin-top: 0vw;
+      margin-left: 1vw;
+    }
+  #p4
+  {
+    position: relative;
+    justify-content: end;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+@media only screen and (max-width: 800px)
+{
+  #i2{
+
+     margin: auto;
+  }
+  #p1
+  {
+    font-size: 0.6em;
+
+
+  }
+  #p2 {
+      justify-content:flex-start;
+    background-color:#1C2331 ;
+      height: 22vh;}
+  #p3
+  {
+    font-size: 0.7em;
+  }
+  #p4
+  {
+    position: relative;
+    justify-content: end;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 </style>
 
 <!--   navbar end  -->
@@ -36,11 +82,14 @@
 
 
 {% if user.is_authenticated %}
+
+<div >
+
 <div   >
 
 <nav id="p2" class="navbar ">
 
-<ul class="nav justify-content-space-between">
+<ul class="nav " id ="p4">
       <li class="nav-item">
         <a class="btn " id="p1"  class="nav-link active" href="{% url 'home' %}">HOME</a>
       </li>
@@ -68,6 +117,18 @@
       <li class="nav-item">
         <a id="p1" class="btn " href="/todo/">TODO</a>
       </li>
+      <h2 class="nav-item"><button type="button" class="btn btn-default" >  </h2>
+      <li  class="nav-item"><button id="p1" type="button" class="btn btn-success">
+              Logged in as {{user.username}}</button> </li>
+
+              <h2 class="nav-item"><button type="button" class="btn btn-default" >  </h2>
+          <li class="nav-item"> <form action="{% url 'logoutuser' %}" method="POST">
+            <form>
+              {% csrf_token %}
+              <button  id="p3" class="btn btn-danger" type="submit">LOGOUT</button>
+
+            </form></li>
+
 </ul>
 
 
@@ -75,19 +136,6 @@
 
 
 
-  <ul class="nav justify-content-end">
-          <h2 class="nav-item"><button type="button" class="btn btn-success">
-              Logged in as {{user.username}}</button> </h2>
-          <h2 class="nav-item"><button type="button" class="btn btn-default" >  </h2>
-
-         <h2  class="nav-item" >
-            <form action="{% url 'logoutuser' %}" method="POST">
-              {% csrf_token %}
-              <button  class="btn btn-danger" type="submit">LOGOUT</button>
-
-            </form>
-        </h2>
-    </ul>
 </nav>
 
 

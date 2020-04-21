@@ -19,11 +19,17 @@ class feedsModel(models.Model):
 	#foreig key stores the relationship between this todo and user
 	#any object that is saved in database has id ie unique value for that object
 	#now what foreignKey does is it takes id of user and saves here
+	def save(self, *args, **kwargs):
+	    super().save(*args, **kwargs)
+	    img = Image.open(self.image.path)
+	    output_size = (600, 600)
+	    img.thumbnail(output_size)
+	    img.save(self.image.path)
 	def __str__(self):
-		return self.title
+	    return self.title
 		#this function show name of title in admin page
-"""	def save(self):
-        super().save()  # saving image first
+"""	def save(self, *args, **kwargs):
+        super().save( *args, **kwargs)  # saving image first
 
         img = Image.open(self.image.path) # Open image using self
 
