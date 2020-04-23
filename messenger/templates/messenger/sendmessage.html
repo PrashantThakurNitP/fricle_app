@@ -41,6 +41,10 @@ body {
    margin-left: 30vw;
    color :white;
   }
+  #error
+{
+  color:red;
+}
 @media only screen and (max-width: 800px) {
   #i2{
    width: 80vw;
@@ -75,6 +79,7 @@ body {
 
 
 <div class="d">
+    <p id ="error"> {{error}}</p>
 <form method="POST">
 {% csrf_token %}
 	  <div class="form-group row">

@@ -37,11 +37,15 @@ body {
   }
   .f
   {
-      font-size:0.7em;
+      font-size:0.5em;
+  }
+  .lgn
+  {
+      font-size:0.8em;
   }
 .g
 {
-    font-size:0.7em;
+    font-size:0.5em;
 }
 
 }
@@ -68,8 +72,11 @@ body {
 
       <!--Body-->
       <div class="md-form">
-        <h5 class="f">username (space not allowed in username)</h5>
+        <h5 class="f">username </h5>
         <label for="Form-email5">{{form.username}}</label>
+         <p class="g">Blank spaces are not allowed in username</p>
+        <p class="g">Don't put your exact email id in username as it would be displayed with your post</p>
+
       </div>
 
       <div class="md-form pb-3">
@@ -101,7 +108,7 @@ body {
 
         <p class="font-small white-text d-flex justify-content-end"><h4 class="g" >Have an account?</h4> <a href="{%url 'loginuser' %}"
 
-            class="green-text ml-1 font-weight-bold"><h3 class="g"> Log in</h3></a></p>
+            class="green-text ml-1 font-weight-bold"><h3 class="lgn"> Log in</h3></a></p>
       </div>
       <!--Grid column-->
 

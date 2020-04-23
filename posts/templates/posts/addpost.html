@@ -32,6 +32,11 @@ body {
 	color: white;
 
 }
+#i6
+{
+	color: white;
+
+}
   #i2{
    width: 50vw;
    margin-left: 30vw;
@@ -44,27 +49,76 @@ body {
    margin-left: 30vw;
    color :white;
   }
+  #i5
+  {
+  	 width: 50vw;
+   margin-left: 30vw;
+   color :white;
+  }
+  #i7
+  {
+  	 width: 50vw;
+   margin-left: 30vw;
+   color :white;
+  }
 @media only screen and (max-width: 800px) {
     #i4
     {
-        margin-left :-4vw;
+
+        margin-left :-8vw;
+        margin-top :-18vh;
+
+    }
+      #i6
+    {
+        margin-left :-6vw;
+        margin-top :-28vh;
     }
   #i2{
    width: 80vw;
-   margin-left: -8vw;
+   margin-left: -10vw;
+   margin-top :-22vh;
    color :white;
   }
   #i3
   {
-  	 width: 80vw;
-   margin-left: -8vw;
+
+  	 height : 35vh;
+   margin-left: -10vw;
+   width: 50vw;
+   margin-top : -10vh;
    color :white;
   }
+  #i5
+  {
+  	 width: 80vw;
+
+   margin-left: -5vw;
+   margin-top: 4.5vh;
+   color :white;
+  }
+   #i7
+  {
+  	 width: 80vw;
+
+   margin-left: -9vw;
+   margin-top : 4vh;
+   color :white;
+  }
+
+    #t
+    {
+        font-size:0.7em;
+    }
+    #bt1
+    {
+        margin-left: 10vw;
+    }
 }
 </style>
 
 <div class="container text-center">
-<h1 class="alert alert-success">SOMETHING TO SHARE</h1>
+<h1 id="t" class="alert alert-success">SOMETHING TO SHARE</h1>
 </div>
 
 
@@ -90,7 +144,7 @@ body {
 
 
 						  <div class="form-group row">
-							    <label for="staticEmail" id="i4" class="col-sm-2 col-form-label">Title</label>
+							    <label for="staticEmail" id="i6" class="col-sm-2 col-form-label">Title</label>
 							    <div id = "i2" class="col-sm-10">
 							      {{form.title}}
 							    </div>
@@ -109,16 +163,16 @@ body {
 
 								<div class="form-check">
 
-							  <label id ="i4"class="form-check-label" for="defaultCheck1">
+							  <label id ="i5"class="form-check-label" for="defaultCheck1">
 							  Image
 							  </label>
 							  <h2>    </h2>
-                <div id ="i3">{{form.image}}</div>
+                <div id ="i7">{{form.image}}</div>
 								</div>
 
 						 	 </div>
 
-				<button class="btn btn-success" type="submit">POST</button>
+				<button id ="bt1" class="btn btn-success" type="submit">POST</button>
 			</form>
 
 

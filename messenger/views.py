@@ -11,7 +11,10 @@ from django.utils import timezone
 from datetime import datetime
 from django.contrib.auth.decorators import login_required
 from django.utils import timezone
+from django.contrib.auth.models import User
 # Create your views here.
+
+
 @login_required
 def sendmessage(request):
     if request.method =="GET": #when user first visit form show the form
@@ -22,18 +25,25 @@ def sendmessage(request):
                #if length is not large we send save it
                #when he click submit
                #fetch information from post request
-               form=messageForm(request.POST)
-               #whatever user sent in post method we cnvert it to TodoForm form ie form
-               newmessage=form.save(commit=False) #commit =False means donot unnecessarily save it into database
-               #in newtodo user field is missing
-               newmessage.sender=request.user#sende is title
-               newmessage.date1=timezone.now()
-               newmessage.save()#now it put it in database
-               #after saving  this we want to send them to current page so that they can see current to do
-               return redirect('viewmessage')
+                if User.objects.filter(username=request.POST['receiver']).exists():
+                    form=messageForm(request.POST)
+                    #whatever user sent in post method we cnvert it to TodoForm form ie form
+                    newmessage=form.save(commit=False) #commit =False means donot unnecessarily save it into database
+                    #in newtodo user field is missing
+                    newmessage.sender=request.user#sende is sender
+                    newmessage.date1=timezone.now()
+                    newmessage.save()#now it put it in database
+                    #after saving  this we want to send them to current page so that they can see current to do
+                    return redirect('viewmessage')
+                else:
+                    return render(request,"messenger/sendmessage.html",{'form':messageForm(),"error":"Receiver donot exist currently.  Message sending failed! Try again with receiver name that exist."})
+
         except ValueError:
                return redirect('sendmessage')
                 #if length of title is long we send back to same page otherwise we will get error
+
+
+        #if length of title is long we send back to same page otherwise we will get error
 """
 @login_required
 def receivedmessage(request):

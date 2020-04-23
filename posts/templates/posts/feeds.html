@@ -33,6 +33,28 @@ body {
    margin-left: -17vw;
    width: 91vw;
   }
+
+
+    #b1
+  {
+      font-size :0.5em;
+  }
+  #fnt1
+  {
+      font-size:0.6em;
+  }
+  #lk
+  {
+      font-size :0.4em;
+  }
+  #at
+  {
+      font-size :0.5em;
+  }
+  #lct
+  {
+      font-size :0.5em;
+  }
 }
 #i3{
 
@@ -44,6 +66,7 @@ body {
    margin-left: 13vw;
    width: 70vw;
   }
+
 </style>
 <body>
 <div id = "i3" class="container text-center">
@@ -52,12 +75,12 @@ body {
 <ul id="i1">
 	{% for feed in feeds %}
             <div id ="i2" class="jumbotron text-center">
-      	<h2><b>{{feed.title}} </b></h2><!-- way to highlight if impotant -->
+      	<h2 id="fnt1"><b>{{feed.title}} </b></h2><!-- way to highlight if impotant -->
 
-                  @ {{feed.user_new}}
+              <p id="at"> @ {{feed.user_new}} </p>
 
 
-                </br>
+
 
                   {% if feed.image %}
                   <img src="{{ feed.image.url }}",height=200, width=200>
@@ -66,7 +89,7 @@ body {
                   </br>
 
       	<p id="b1">{% if feed.description %} - {{feed.description}} {% endif %}</p>
-                        {{feed.upvote}} like
+                      <p id="lct">  {{feed.upvote}} like </p>
 
             {% ifequal feed.user_new.username user.username  %}
 
@@ -87,12 +110,12 @@ body {
                   <form method ="POST" action="{% url 'upvote' feed.id user.username %}">
                                           {% csrf_token %}
 
-                                          <button class="btn btn-success" type="submit">Like</button>
+                                          <button  class="btn btn-success" type="submit">Like</button>
                                     </form>
 
             {% endifnotequal %}
-            <br>
-             liked by : {{feed.upvoter}}
+
+          <p id="lk">   liked by : {{feed.upvoter}}</p>
 
       </div>
 

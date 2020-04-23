@@ -4,22 +4,97 @@
 
 <style type="text/css">
 
-
 body {
   background-image: url('https://cdn.dribbble.com/users/722246/screenshots/11096994/media/abcf2fe91c135bbaec19a3816dd0a992.gif');
   background-repeat: repeat-y;
   background-size: 100vw 100vh;
+  margin-top: auto;
+
   margin-top: 0vw;
+
+}
+
+	.flex-container{
+    display: flex;
+    align-items: flex-start;
+   margin-left :10vw;
+    align-content: center;
+     flex-wrap: wrap;
+
+  }
+  #boxcard
+  {
+  	display: flex;
+  	width: 30vw;
+  	height: 50vh;
+  	margin: 4vw;
+  		background-color: #E4FF33
+  }
+   #todo1
+  {
+  	margin-left: 5vw;
+  }
+.oval
+{
+    border-radius:50%;
+}
+@media only screen and (max-width: 800px)
+{
+
+
+		 #boxcard
+  {
+  	display: flex;
+  	width: 80vw;
+  	height: 50vh;
+  	margin:1vw;
+  		background-color: #E4FF33
+  }
 }
 </style>
 
-<div class="container text-center">
+<div id="todo1" class="container text-center">
 <h1 class="container p-3 my-3 bg-dark text-white">TODO </h1>
 </div>
-<div class="container text-center">
-<h1 class="alert alert-success">MANAGE YOUR TO DO LIST EFFICIENTLY  MARK THEM COMPLETED AND EVEN DELETE THEM IF LIKE . ACCESIBLE FROM EVERY DEVICE . PROTECTED WITH YOUR PASSWORD</h1>
-</div>
-<div class="container text-center">
-<h1 class="alert alert-success">CREATE YOUR LIST NOW</h1>
-</div>
+<body>
+
+<div  class="flex-container">
+
+
+
+
+		<a href="{% url "currenttodos" %}"><div id="boxcard" class="card">
+ 			 <img class="oval" src="https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fdam%2Fimageserve%2F1092571024%2F960x0.jpg%3Ffit%3Dscale" alt="Avatar" style="height:60%">
+  			<div class="container">
+   			 <h4 style="color:red"><b>THINGS TO BE DONE</b></h4>
+   			 <p style="font-size: 1.2em">Visit you to do list. you can modify your todolist by clicking on them</p>
+  			</div>
+			</div></a>
+
+			<a href="{% url "createtodo" %}"><div id="boxcard" class="card">
+ 			 <img class="oval" src="https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="Avatar" style="height:60%">
+  			<div class="container">
+   			 <h4 style="color:green"><b>ADD TASK TO YOUR TO DO LIST</b></h4>
+   			 <p style="font-size: 1.2em">Mark things to be done to your todo list</p>
+  			</div>
+			</div></a>
+					<a href="{% url "completedtodos" %}"><div id="boxcard" class="card">
+ 			 <img class="oval" src="https://cdn.pixabay.com/photo/2018/04/21/14/17/raise-3338589_1280.jpg" alt="Avatar" style="height:60%">
+  			<div class="container">
+   			 <h4 style="color:violet"><b>YOUR ACHIEVEMENT</b></h4>
+   			 <p style="font-size: 1.2em">Task that you have completed </p>
+  			</div>
+			</div></a>
+
+
+			<a href="{% url "home" %}"><div id="boxcard" class="card">
+ 			 <img class="oval" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQWELoD6XvzEikMU9aLhDOQlp89wmoosYUmje6rZx-VWUB63M8g&usqp=CAU" alt="Avatar" style="height:60%">
+  			<div class="container">
+   			 <h4 style="color:pink"><b>HOME PAGE</b></h4>
+   			 <p style="font-size: 1.2em">Go to Homepage</p>
+  			</div>
+			</div></a>
+
+
+</body>
 {% endblock %}
