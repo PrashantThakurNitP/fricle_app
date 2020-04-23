@@ -157,7 +157,7 @@ def loginuser(request):
         else:
             #login
             login(request,user)
-            return redirect('feeds')
+            return redirect('home')
 @login_required
 def addpost(request):
     if request.method =="GET": #when user first visit form show the form

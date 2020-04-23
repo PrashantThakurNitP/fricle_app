@@ -58,11 +58,17 @@ font-family: 'Great Vibes', cursive;
   	width: 20vw;
   	height: 50vh;
   	margin:5vw;
-  		background-color: #E4FF33
+  	margin-top:0vh;
+  		background-color: #003366;
   }
+  #boxcard:hover
+{
+  background-color: #cc0099;
+
+}
   .oval
   {
-      border-radius: 50%;
+  	border-radius: 50%;
   }
 @media only screen and (max-width: 800px)
 {
@@ -74,8 +80,15 @@ font-family: 'Great Vibes', cursive;
   	width: 80vw;
   	height: 50vh;
   	margin:1vw;
-  		background-color: #E4FF33
+  	background-color: #E4FF33;
+  	background-color: #003366;
+
   }
+   #boxcard:hover
+{
+  background-color: #cc0099;
+
+}
 #s1
 	{
 
@@ -110,52 +123,51 @@ font-family: 'Great Vibes', cursive;
 <div  class="flex-container">
 
   					<a href="{% url 'feeds' %}"><div id="boxcard" class="card">
-  					<img  class="oval" src="https://cdn.pixabay.com/photo/2015/01/20/14/27/office-605503_1280.jpg" alt="Avatar" style="height: 60%">
+  					<img class="oval" class="oval" src="https://cdn.pixabay.com/photo/2015/01/20/14/27/office-605503_1280.jpg" alt="Avatar" style="height: 60%">
   					<div class="container">
-   					 <h4 style="color:blue"><b>FEEDS</b></h4>
-   					 <p style="font-size: 1.2em">See your feeds</p>
+   					 <h4 style="color:white"><b>FEEDS</b></h4>
+   					 <p style="color:white"style="font-size: 1.2em">See your feeds</p>
   					</div>
 					</div></a>
-
 					<a href="{% url 'addpost' %}"><div id="boxcard" class="card">
   					<img class="oval" src="https://images.unsplash.com/photo-1472393365320-db77a5abbecc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="Avatar" style="height: 60%">
   					<div class="container">
-   					 <h4 style="color:blue"><b>SHARE YOUR POSTS</b></h4>
-   					 <p style="font-size: 1.2em">Add your  posts. Share your stories with world.</p>
+   					 <h4 style="color:white"><b>SHARE YOUR POSTS</b></h4>
+   					 <p style="color:white" style="font-size: 1.2em">Add your  posts. Share your stories with world.</p>
   					</div>
 					</div></a>
 
 
 
 		  			<a href="{% url 'sendmessage' %}"><div id="boxcard" class="card">
-		  <img class="oval"  src="https://cdn.pixabay.com/photo/2018/03/22/02/37/email-3249062__340.png" style="height:60%">
+		  <img class="oval" src="https://cdn.pixabay.com/photo/2018/03/22/02/37/email-3249062__340.png" style="height:60%">
 		  <div class="container">
-		    <h4 style="color:green"><b>YOUR MESSENGER</b></h4>
-		    <p style="font-size: 1.2em"> Ping your friends using their username. Do one to one conversations</p>
+		    <h4 style="color:white"><b>YOUR MESSENGER</b></h4>
+		    <p style="color:white" style="font-size: 1.2em"> Ping your friends using their username. Do one to one conversations</p>
 		  </div>
 
 		</div></a>
 		<a href="{% url 'viewmessage' %}"><div id="boxcard" class="card">
 		  <img class="oval" src="https://cdn.pixabay.com/photo/2015/11/15/19/49/ipad-1044716__340.jpg" style="height:60%">
 		  <div class="container">
-		    <h4 style="color:red"><b>YOUR CHAT</b></h4>
-		    <p style="font-size: 1.2em">Goto your conversations</p>
+		    <h4 style="color:white"><b>YOUR CHAT</b></h4>
+		    <p style="color:white" style="font-size: 1.2em">Goto your conversations</p>
 		  </div>
 		</div></a>
 
 		<a href="{% url "currenttodos" %}"><div id="boxcard" class="card">
- 			 <img class="oval"  src="https://previews.123rf.com/images/bryljaev/bryljaev1203/bryljaev120300030/12841446-bulletin-board-with-todo-list-and-check-list.jpg" alt="Avatar" style="height:60%">
+ 			 <img class="oval" src="https://previews.123rf.com/images/bryljaev/bryljaev1203/bryljaev120300030/12841446-bulletin-board-with-todo-list-and-check-list.jpg" alt="Avatar" style="height:60%">
   			<div class="container">
-   			 <h4 style="color:green"><b>THINGS TO BE DONE</b></h4>
-   			 <p style="font-size: 1.2em">Manage your Todo list </p>
+   			 <h4 style="color:white"><b>THINGS TO BE DONE</b></h4>
+   			 <p style="color:white" style="font-size: 1.2em">Manage your Todo list </p>
   			</div>
 			</div></a>
 
 			<a href="{% url "createtodo" %}"><div id="boxcard" class="card">
  			 <img class="oval" src="https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="Avatar" style="height:60%">
   			<div class="container">
-   			 <h4 style="color:blue"><b>DON'T FORGET YOUR PRIORITY</b></h4>
-   			 <p style="font-size: 1.2em">Mark things to be done to your todo list</p>
+   			 <h4 style="color:white"><b>DON'T FORGET YOUR PRIORITY</b></h4>
+   			 <p style="color:white" style="font-size: 1.2em">Mark things to be done to your todo list</p>
   			</div>
 			</div></a>
 

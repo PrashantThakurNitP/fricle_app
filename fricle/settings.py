@@ -127,6 +127,6 @@ STATIC_ROOT = os.path.join(BASE_DIR,'static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
-LOGIN_URL='/login'#specify url of login page so that if not logged in and try to acess content redirect here
+LOGIN_URL='/loginuser'#specify url of login page so that if not logged in and try to acess content redirect here
 
 
