@@ -25,12 +25,26 @@
     {
         font-size:0.8em;
     }
+     #icon:hover
+{
+  background-color: #cc0099;
+  text-decoration: none;
+
+}
+#divnav
+{
+    box-shadow: 4px 8px #888888;
+}
     @media only screen and (max-width: 800px)
 {
     #icon
     {
         font-size:0.5em;
     }
+    #divnav
+{
+    box-shadow: 2px 4px #888888;
+}
 }
 </style>
 
@@ -39,7 +53,7 @@
 
 
 {% if user.is_authenticated %}
-<div  >
+<div id="divnav" >
 <nav class="navbar navbar-dark bg-dark">
 
 <ul class="nav justify-content-space-between">

@@ -34,14 +34,16 @@ body {
   	width: 25vw;
   	height: 50vh;
   	margin: 8vw;
+  	margin-top :0vh;
   	background-color: #E4FF33;
   	background-color: #003366;
+  	box-shadow: 5px 10px #888888;
   }
 
-#boxcard:hover 
+#boxcard:hover
 {
   background-color: #cc0099;
-  
+
 }
   #todo
   {
@@ -51,7 +53,7 @@ body {
   {
   	border-radius: 50%;
   }
-@media only screen and (max-width: 800px) 
+@media only screen and (max-width: 800px)
 {
 
 
@@ -63,12 +65,13 @@ body {
   	margin:1vw;
   	background-color: #E4FF33;
   	background-color: #003366;
-  	
+  	box-shadow: 2px 4px #888888;
+
   }
-  #boxcard:hover 
+  #boxcard:hover
 {
   background-color: #cc0099;
-  
+
 }
 }
 </style>
@@ -80,8 +83,8 @@ body {
 
 <div  class="flex-container">
 
-  					
-		
+
+
 
 		<a href="{% url "currenttodos" %}"><div   onmouseover ="changeColor()" onmouseleave="changecolor2()" id="boxcard" class="card">
  			 <img class="oval" src="https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fdam%2Fimageserve%2F1092571024%2F960x0.jpg%3Ffit%3Dscale" alt="Avatar" style="height:60%">
