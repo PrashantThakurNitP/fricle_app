@@ -17,35 +17,103 @@
     <title>FRICLE</title>
   </head>
   <body>
-  	<!-- start -->
+    <!-- start -->
 
 
 <style type="text/css">
-    #icon
-    {
-        font-size:0.8em;
+
+ #p1 {background-color:#3F729B ;
+        color: white;
+        margin-top: 1.5vh;
     }
-     #icon:hover
+    #p2 {background-color:#1C2331 ;
+      height: 13vh;
+      width :100vw;
+      margin-top: 0.5vh;
+      margin-left :0vw;
+      box-shadow: 4px 8px #888888;
+    }
+    #i2
+    {
+        margin-left :1vw;
+        margin-right :1vw;
+
+    }
+    #p3
+    {
+      font-size: 0.9em;
+      margin-top: 0vw;
+      margin-left: 1vh;
+      margin-top: 2vh;
+    }
+  #p4
+  {
+    position: relative;
+    justify-content: end;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+  .flex-container{
+    display: flex;
+    align-items: center;
+    margin :2vw;
+    align-content: space-between;
+     flex-wrap: wrap;
+  }
+   #p1:hover
 {
   background-color: #cc0099;
   text-decoration: none;
 
 }
-#divnav
+#p2:hover
 {
     box-shadow: 4px 8px #888888;
 }
-    @media only screen and (max-width: 800px)
+
+@media only screen and (max-width: 800px)
 {
-    #icon
-    {
-        font-size:0.5em;
-    }
-    #divnav
+
+    #i2{
+
+     margin: auto;
+  }
+
+  #p1{
+    font-size: 0.6em;
+    margin-top: 0.1vh;
+
+
+  }
+  #p2 {
+      justify-content:flex-start;
+    background-color: #1C2331;
+      height: 22vh;
+      box-shadow: 2px 4px #888888;
+  }
+#p2 : hover
 {
     box-shadow: 2px 4px #888888;
 }
+
+  #p3
+  {
+    font-size: 0.6em;
+    margin-top: 0.1vh;
+  }
+  #p4
+  {
+    position: relative;
+    justify-content: end;
+    margin-left: 0vw;
+    margin-right: auto;
+    margin-top: 3vw;
+    margin-bottom: 2vw;
+  }
 }
+
+
 </style>
 
 
@@ -53,76 +121,82 @@
 
 
 {% if user.is_authenticated %}
-<div id="divnav" >
-<nav class="navbar navbar-dark bg-dark">
-
-<ul class="nav justify-content-space-between">
-
-
-	<h3 id="icon" class="nav-item">
-		    <a  class="btn btn-primary" class="nav-link primary" href="{% url 'home' %}">HOME</a>
-		  </h3>
 
 
 
-		  <h2 class="nav-item"><button type="button" class="btn btn-default" >  </h2>
+<div id ="p2" class="flex-container"  >
 
 
-		  <h3 id="icon" class="nav-item">
-		    <a class="btn btn-primary" href="{% url "createtodo" %}">CREATE</a>
-		  </h3>
-		   <h2 class="nav-item"><button type="button" class="btn btn-default" >  </h2>
 
-		  	<h3 id="icon" class="nav-item">
-		    <a class="btn btn-primary" class="nav-link active" href="{% url 'home_todo' %}">TODO</a>
-		  </h3>
-		   <h2 class="nav-item"><button type="button" class="btn btn-default" >  </h2>
-		  <h3 id="icon">
-		    <a class="btn btn-primary" href="{% url "currenttodos" %}">ACTIVE</a>
-		  </h3 id="icon">
-		   <h3 class="nav-item"><button type="button" class="btn btn-default" >  </h3>
-
-		   <h3 id="icon" class="nav-item">
-		    <a class="btn btn-primary" href="{% url "completedtodos" %}">COMPLETED</a>
-		  </h3>
-		  </ul>
-
-  <ul class="nav justify-content-end">
-
-  <h3 class="nav-item"><button type="button" class="btn btn-default" >  </h3>
+<ul class="nav " id ="p4">
+      <li class="nav-item">
+        <a class="btn " id="p1"  class="nav-link active" href="{% url 'home' %}">HOME</a>
+      </li>
 
 
-			    <h3 id="icon" class="nav-item"><button type="button" class="btn btn-success">
-			  			Logged in as {{user.username}}</button> </h2>
-			    <h3 class="nav-item"><button type="button" class="btn btn-default" >  </h3>
+             <h2 class="nav-item"><button type="button" class="btn btn-default" >  </h2>
+      <li class="nav-item">
+        <a id="p1"  class="btn " href="{% url 'createtodo' %}">CREATE</a>
+      </li>
 
-				 <h3 id="icon"  class="nav-item" >
-						<form action="{% url 'logoutuser' %}" method="POST">
-							{% csrf_token %}
-							<button  class="btn btn-danger" type="submit">LOGOUT</button>
 
-						</form>
-				</h3>
-	  </ul>
-</nav>
+      </li>
+
+ <h2 class="nav-item"> <button type="button" class="btn btn-default" ></h2>
+       <li class="nav-item">
+        <a id="p1"  class="btn " id="a1" href="{% url 'currenttodos' %}">BACKLOG</a>
+      </li>
+       <h2 class="nav-item"><button type="button" class="btn btn-default" >  </h2>
+        <li class="nav-item">
+        <a id="p1"  class="btn " id="a1" href="{% url 'completedtodos' %}">ACHIEVED</a>
+      </li>
+       <h2 class="nav-item"><button type="button" class="btn btn-default" >  </h2>
+      <li class="nav-item">
+        <a id="p1" class="btn " href="/todo/">TODO</a>
+      </li>
+      <h2 class="nav-item"><button type="button" class="btn btn-default" >  </h2>
+      <li  class="nav-item"><button id="p1" type="button" class="btn btn-success">
+              Logged in as {{user.username}}</button> </li>
+
+              <h2 class="nav-item"><button type="button" class="btn btn-default" >  </h2>
+          <li class="nav-item"> <form action="{% url 'logoutuser' %}" method="POST">
+
+              {% csrf_token %}
+              <button  id="p3" class="btn btn-danger" type="submit">LOGOUT</button>
+
+            </form></li>
+
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
 
-
-
 {% else %}
+
 <div>
 <nav class="navbar navbar-dark bg-dark">
 
 <ul class="nav justify-content-end">
-			 <li class="nav-item">
-			<a   class="btn btn-info" class="nav-link active" href="{% url 'signupusertodo' %}">SignUp</a>
-			</li>
-			<h2 class="nav-item">
-     				<a class="nav-link" href="">    </a>
-			 </h2>
-			 <li class="nav-item">
-			<a    class="btn btn-info" class="nav-link active" href="{% url 'loginusertodo' %}">Login</a>
-			</li>
+       <li class="nav-item">
+      <a   class="btn btn-info" class="nav-link active" href="{% url 'signupuser' %}">SignUp</a>
+      </li>
+      <h2 class="nav-item">
+            <a class="nav-link" href="">    </a>
+       </h2>
+       <li class="nav-item">
+      <a    class="btn btn-info" class="nav-link active" href="{% url 'loginuser' %}">Login</a>
+      </li>
 </ul>
 </nav>
 </div>
@@ -132,7 +206,7 @@
 
 
 
-  	<!--end -->
+    <!--end -->
     <div class="container-fluid">
    {% block content %} {% endblock %}
  </div>

@@ -8,14 +8,14 @@
 
 
 <style type="text/css">
-	.d
-	{
-		display: flex
-			align-self: top;
+  .d
+  {
+    display: flex
+      align-self: top;
 
          padding-left: 10vw;
 
-	}
+  }
 
 
 body {
@@ -24,45 +24,132 @@ body {
   background-size: 100vw 100vh;
   margin-top: 0vw;
 }
-
-#i4
+#error
 {
-	color: white;
+  color: red;
 }
-  #i2{
-   width: 50vw;
-   margin-left: 30vw;
-   color :white;
 
-  }
-  #i3
+ #t
   {
-  	 width: 50vw;
-   margin-left: 30vw;
-   color :white;
+       background-color :#3F729B;
+      color :white;
+      box-shadow: 3px 6px #000066;
+      align-content: center;
   }
-  #error
-{
-  color:red;
-}
+
+    #tit
+    {
+      margin-top: 0vh;
+      margin-left: -5vw;
+      color: white;
+      font-size: 2em;
+    }
+       #id_receiver{
+        margin-top: -4vh;
+        margin-left: 15vw;
+        width :55vw;
+        height :10vh;
+        color:white;
+        font-size:1.5em;
+        background-color :#009933;
+        box-shadow: 2px 4px white;
+    }
+    #des
+    {
+      margin-top: 20vh;
+      margin-left: -5vw;
+      color: white;
+      font-size: 2em;
+
+    }
+
+    #id_title{
+        margin-top:-14vh;
+        margin-left:15vw;
+        width :55vw;
+        height :40vh;
+        font-size:1.5m;
+        background-color :#009933;
+        color :white;
+        box-shadow: 2px 4px white;
+    }
+      #bt1
+  {
+    margin-top: 5vh;
+    margin-left :30vw;
+    font-size: 2em;
+    background-color:blue;
+    color:white;
+  }
+
+
+
 @media only screen and (max-width: 800px) {
-  #i2{
-   width: 80vw;
-   margin-left: -4vw;
-   color :white;
-  }
-  #i3
-  {
-  	 width: 80vw;
-   margin-left: -4vw;
-   color :white;
-  }
-}
 
+
+    #t
+    {
+        font-size:0.7em;
+         background-color :#3F729B;
+      color :white;
+      box-shadow: 2px 4px #000066;
+    }
+
+
+
+
+
+     #tit
+    {
+      margin-top: 5vh;
+      margin-left: -5vw;
+      color: white;
+      font-size: 2em;
+    }
+       #id_receiver{
+        margin-top: 2vh;
+        margin-left: -5vw;
+        width :80vw;
+        height :10vh;
+        color:white;
+        font-size:1.5em;
+        background-color :#009933;
+        box-shadow: 2px 4px white;
+    }
+    #des
+    {
+      margin-top: 2vh;
+      margin-left: 0vw;
+      color: white;
+      font-size: 2em;
+
+    }
+
+    #id_title{
+        margin-top:2vh;
+        margin-left:-5vw;
+        width :80vw;
+        height :40vh;
+        font-size:1.5m;
+        background-color :#009933;
+        color :white;
+        box-shadow: 2px 4px white;
+    }
+      #bt1
+  {
+    margin-top: 2vh;
+    margin-left :20vw;
+    font-size: 1.5em;
+    background-color:blue;
+    color:white;
+  }
+
+
+}
 </style>
 
 <div class="container text-center">
-<h2 class="container p-3 my-3 bg-dark text-white">Your Chat</h2>
+<h1 id="t" class="alert alert-success">SEND PRIVATE MESSAGE</h1>
 </div>
 
 
@@ -82,21 +169,19 @@ body {
     <p id ="error"> {{error}}</p>
 <form method="POST">
 {% csrf_token %}
-	  <div class="form-group row">
-							    <label id="i4" for="staticEmail" class="col-sm-2 col-form-label" >To</label>
-							    <div id="i3"class="col-sm-10">
-							      {{form.receiver}}
-							    </div>
-							  </div>
 
 
- 								<div class="form-group row">
-							    <label id="i4" for="inputPassword" class="col-sm-2 col-form-label" >Your message</label>
-							    <div id ="i2" class="col-sm-10">
-							     	{{form.title}}
-							    </div>
+                 <h3 id="tit" >To</h3>
+                  {{form.receiver}}
 
-<button type="submit">submit</button>
+                 <h3 id="des" >Message</h3>
+                 {{form.title}}
+
+
+
+
+                  <button id="bt1" class="btn btn-success" type="submit">SEND</button>
+
 </form>
 </div>
 

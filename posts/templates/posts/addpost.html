@@ -20,100 +20,145 @@ body {
   background-size: 100vw 100vh;
   margin-top: 0vw;
 }
-#i3
-{
-	color :white;
-	background-position: blue
-}
 
-
-#i4
-{
-	color: white;
-
-}
-#i6
-{
-	color: white;
-
-}
-  #i2{
-   width: 50vw;
-   margin-left: 30vw;
-   color :white;
-
-  }
-  #i3
+  #t
   {
-  	 width: 50vw;
-   margin-left: 30vw;
-   color :white;
+       background-color :#3F729B;
+      color :white;
+      box-shadow: 2px 4px #000066;
   }
-  #i5
+
+    #tit
+    {
+      margin-top: 0vh;
+      margin-left: 0vw;
+      color: white;
+      font-size: 2em;
+    }
+       #id_title{
+        margin-top: -4vh;
+        margin-left: 20vw;
+        width :60vw;
+        height :10vh;
+        color:white;
+        font-size:1.5em;
+        background-color :#009933;
+        box-shadow: 2px 4px white;
+    }
+    #des
+    {
+      margin-top: 20vh;
+      margin-left: 0vw;
+      color: white;
+      font-size: 2em;
+
+    }
+
+    #id_description{
+        margin-top:-14vh;
+        margin-left:20vw;
+        width :60vw;
+        height :40vh;
+        font-size:1.5m;
+        background-color :#009933;
+        color :white;
+        box-shadow: 2px 4px white;
+    }
+      #bt1
   {
-  	 width: 50vw;
-   margin-left: 30vw;
-   color :white;
+    margin-top: 15vh;
+    margin-left :10vw;
+    font-size: 2em;
+    background-color:blue;
+    color:white;
   }
-  #i7
+  #img
   {
-  	 width: 50vw;
-   margin-left: 30vw;
-   color :white;
+    color:white;
+    margin-top: 10vh
   }
+  #id_image
+  {
+    margin-top: -10vw;
+    margin-left: 30vw;
+    color: white
+
+  }
+
+
 @media only screen and (max-width: 800px) {
-    #i4
-    {
 
-        margin-left :-8vw;
-        margin-top :-18vh;
-
-    }
-      #i6
-    {
-        margin-left :-6vw;
-        margin-top :-28vh;
-    }
-  #i2{
-   width: 80vw;
-   margin-left: -10vw;
-   margin-top :-22vh;
-   color :white;
-  }
-  #i3
-  {
-
-  	 height : 35vh;
-   margin-left: -10vw;
-   width: 50vw;
-   margin-top : -10vh;
-   color :white;
-  }
-  #i5
-  {
-  	 width: 80vw;
-
-   margin-left: -5vw;
-   margin-top: 4.5vh;
-   color :white;
-  }
-   #i7
-  {
-  	 width: 80vw;
-
-   margin-left: -9vw;
-   margin-top : 4vh;
-   color :white;
-  }
 
     #t
     {
         font-size:0.7em;
+         background-color :#3F729B;
+      color :white;
+      box-shadow: 2px 4px #000066;
     }
-    #bt1
+
+
+
+
+
+     #tit
     {
-        margin-left: 10vw;
+      margin-top: 0vh;
+      margin-left: 10vw;
+      color: white;
+      font-size: 2em;
     }
+       #id_title{
+        margin-top: 2vh;
+        margin-left: 5vw;
+        width :65vw;
+        height :10vh;
+        color:white;
+        font-size:1.5em;
+        background-color :#009933;
+        box-shadow: 2px 4px white;
+    }
+    #des
+    {
+      margin-top: 2vh;
+      margin-left: 10vw;
+      color: white;
+      font-size: 2em;
+
+    }
+
+    #id_description{
+        margin-top:2vh;
+        margin-left:5vw;
+        width :65vw;
+        height :40vh;
+        font-size:1.5m;
+        background-color :#009933;
+        color :white;
+        box-shadow: 2px 4px white;
+    }
+      #bt1
+  {
+    margin-top: 2vh;
+    margin-left :20vw;
+    font-size: 1.5em;
+    background-color:blue;
+    color:white;
+  }
+  #img
+  {
+    color:white;
+    margin-left: 15vw;
+    margin-top: 2vh
+  }
+  #id_image
+  {
+    margin-top: 2vw;
+    margin-left: 15vw;
+    color: white
+
+  }
+
 }
 </style>
 
@@ -129,7 +174,7 @@ body {
 
 
 
-					<h2 id ="i3">{{error}}</h2>
+					<h2 id ="error">{{error}}</h2>
 
 
 
@@ -143,36 +188,17 @@ body {
 				{% csrf_token %}
 
 
-						  <div class="form-group row">
-							    <label for="staticEmail" id="i6" class="col-sm-2 col-form-label">Title</label>
-							    <div id = "i2" class="col-sm-10">
-							      {{form.title}}
-							    </div>
-							  </div>
 
+							    <h3 id="tit" >Title</h3>
+							    {{form.title}}
 
- 								<div class="form-group row">
-							    <label for="inputPassword" id ="i4" class="col-sm-2 col-form-label">Description</label>
-							    <div id="i3" class="col-sm-10">
-							     	{{form.description}}
-							    </div>
+							   <h3 id="des" >Description</h3>
+							   {{form.description}}
 
+							  <h3 id="img" >Image</h3>
+                 {{form.image}}
 
-
-
-
-								<div class="form-check">
-
-							  <label id ="i5"class="form-check-label" for="defaultCheck1">
-							  Image
-							  </label>
-							  <h2>    </h2>
-                <div id ="i7">{{form.image}}</div>
-								</div>
-
-						 	 </div>
-
-				<button id ="bt1" class="btn btn-success" type="submit">POST</button>
+                  <button id="bt1" class="btn btn-success" type="submit">POST</button>
 			</form>
 
 

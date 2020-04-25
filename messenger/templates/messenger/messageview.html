@@ -37,11 +37,32 @@ body {
 	margin-left: 10vw;
 	width: 81vw;
 }
+ #i1
+  {
+       background-color :#3F729B;
+      color :white;
+      box-shadow: 3px 6px #000066;
+      text-align :center;
+  }
+  #send1
+  {
+
+
+      box-shadow: 2px 4px #ff3300;
+
+  }
+   #rec1
+  {
+
+      box-shadow: 2px 4px #006600;
+  }
 @media only screen and (max-width: 900px) {
   #i1{
 
    margin-left: 13vw;
    width: 75vw;
+   font-size: 0.7em;
+   text-align: center;
   }
   #i2
 {
@@ -62,7 +83,7 @@ body {
 
 			 {% if message.sender == user %}
 
-					<div class="alert alert-warning">
+					<div id = "send1" class="alert alert-warning">
 					<b><p>Sender  :  {{message.sender}}(you)</p></b>
 						<br>
 					{% if message.title %}
@@ -82,7 +103,7 @@ body {
 
 
 			 {% else %}
-					<div class="alert alert-success">
+					<div id = "rec1" class="alert alert-success">
 					<b><p>Sender : {{message.sender}}</p></b>
 					<br>
 					{% if message.title %}
