@@ -1,6 +1,4 @@
-{% extends 'todo/base_todo.html' %}
 
-{% block content %}
 <style type="text/css">
 	.d
 	{
@@ -16,17 +14,12 @@ font-family: 'Permanent Marker', cursive;
 font-family: 'Fredoka One', cursive;
 font-family: 'Pacifico', cursive;
 }
-#f
-{
-color: white;
-}
 #b1
 {
       font-family: 'Permanent Marker', cursive;
 font-family: 'Fredoka One', cursive;
 font-family: 'Pacifico', cursive;
 font-family: 'Great Vibes', cursive;
-color :white;
 }
 
 body {
@@ -35,10 +28,158 @@ body {
   background-size: 100vw 100vh;
   margin-top: 0vw;
 }
-</style>
 
+
+
+
+
+ #t
+  {
+       background-color :#3F729B;
+      color :white;
+      box-shadow: 3px 6px #000066;
+      align-content: center;
+  }
+  
+    #tit
+    {
+      margin-top: 0vh;
+      margin-left: -5vw;
+      color: white;
+      font-size: 2em;
+    }
+       #id_title{
+        margin-top: -4vh;
+        margin-left: 15vw;
+        width :60vw;
+        height :10vh;
+        color:white;
+        font-size:1.5em;
+        background-color :#009933;
+        box-shadow: 2px 4px white;
+    }
+    #des
+    {
+      margin-top: 20vh;
+      margin-left: -5vw;
+      color: white;
+      font-size: 2em;
+
+    }
+
+    #id_memo{
+        margin-top:-14vh;
+        margin-left:15vw;
+        width :60vw;
+        height :40vh;
+        font-size:1.5m;
+        background-color :#009933;
+        color :white;
+        box-shadow: 2px 4px white;
+    }
+      #bt1
+  {
+    margin-top: 5vh;
+    margin-left :30vw;
+    font-size: 2em;
+    background-color:blue;
+    color:white;
+  }
+  #imp
+  {
+    color:white;
+    margin-top: 0vh
+    margin-left:40vw;
+  }
+  #id_important
+  {
+    margin-top: 10vh;
+    margin-left: 5vw;
+    color: white
+
+  }
+ 
+
+@media only screen and (max-width: 800px) {
+
+
+    #t
+    {
+        font-size:0.7em;
+         background-color :#3F729B;
+      color :white;
+      box-shadow: 2px 4px #000066;
+    }
+
+
+
+
+
+     #tit
+    {
+      margin-top: 5vh;
+      margin-left: -5vw;
+      color: white;
+      font-size: 2em;
+    }
+       #id_title{
+        margin-top: 2vh;
+        margin-left: -5vw;
+        width :80vw;
+        height :10vh;
+        color:white;
+        font-size:1.5em;
+        background-color :#009933;
+        box-shadow: 2px 4px white;
+    }
+    #des
+    {
+      margin-top: 2vh;
+      margin-left: 0vw;
+      color: white;
+      font-size: 2em;
+
+    }
+
+    #id_memo{
+        margin-top:2vh;
+        margin-left:-5vw;
+        width :80vw;
+        height :40vh;
+        font-size:1.5m;
+        background-color :#009933;
+        color :white;
+        box-shadow: 2px 4px white;
+    }
+      #bt1
+  {
+    margin-top: 2vh;
+    margin-left :20vw;
+    font-size: 1.5em;
+    background-color:blue;
+    color:white;
+  }
+  #imp
+  {
+    color:white;
+    margin-left: 30vw;
+    margin-top: -4vh
+  }
+  #id_important
+  {
+    margin-top: 8vw;
+    margin-left: 5vw;
+    color: white
+
+  }
+
+}
+</style>
+{% extends 'todo/base_todo.html' %}
+
+{% block content %}
 <div class="container text-center">
-	<h1 class="alert alert-success">Update Your To-do List</h1>
+	<h1 class="alert alert-success" id="t">Update Your To-do List</h1>
 	</div>
 <div class="d">
 {{ error }}
@@ -49,27 +190,23 @@ body {
 
 							{% csrf_token %}
 
-						  <div class="form-group row">
-						    <label  for="staticEmail" class="col-sm-2 col-form-label" id="f">Title</label>
-						    <div class="col-sm-10">
-						      {{form.title}}
-						    </div>
-						  </div>
-						  <div class="form-group row">
-						    <label  for="inputPassword" class="col-sm-2 col-form-label" id="b1">Description</label>
-						    <div class="col-sm-10">
-						     	{{form.memo}}
-						    </div>
 
-							<div class="form-check">
-						      {{form.important}}
-						  <label  class="form-check-label" for="defaultCheck1" id= "f">
-						    Important
-						  </label>
-						</div>
+							 <h3 id="tit" >Title</h3>
+                  {{form.title}}
 
-						  </div>
-						  <button class="btn btn-info" type="submit">Save</button>
+                 <h3 id="des" >Description</h3>
+                 {{form.memo}}
+
+                 {{form.important}}
+                <h3 id="imp" >Important</h3>
+                 
+                 
+                  <button id="bt1" class="btn btn-success" type="submit">SAVE</button>
+
+
+
+
+
 					</form>
 
 

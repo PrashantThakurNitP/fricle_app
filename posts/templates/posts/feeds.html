@@ -84,7 +84,7 @@ body {
             <div id ="i2" class="jumbotron text-center">
       	<h2 id="fnt1"><b>{{feed.title}} </b></h2><!-- way to highlight if impotant -->
 
-              <p id="at"> @ {{feed.user_new}} </p>
+              <p id="at"> @ {{feed.user_new}}      |  {% if feed.created %} - {{feed.created}} {% endif %}</p>
 
 
 
