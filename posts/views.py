@@ -23,7 +23,7 @@ def home(request):
     return render(request,"posts/home.html",{"hello":"meassage"})
 @login_required
 def feeds(request):
-    feeds1=feedsModel.objects.all()#if we apply .all then for person everyon to do list will be shown
+    feeds1=feedsModel.objects.all().order_by('created')#if we apply .all then for person everyon to do list will be shown
 
 
     return render(request,"posts/feeds.html",{"feeds":feeds1})

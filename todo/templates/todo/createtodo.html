@@ -42,11 +42,11 @@ body {
        #id_title{
         margin-top: -4vh;
         margin-left: 15vw;
-        width :60vw;
+        width :40vw;
         height :10vh;
-        color:white;
+        color:blue;
         font-size:1.5em;
-        background-color :#009933;
+        background-color :#ffff99;
         box-shadow: 2px 4px white;
     }
     #des
@@ -61,16 +61,16 @@ body {
     #id_memo{
         margin-top:-14vh;
         margin-left:15vw;
-        width :60vw;
-        height :40vh;
-        font-size:1.5m;
-        background-color :#009933;
-        color :white;
+        width :40vw;
+        height :20vh;
+        font-size:1em;
+        background-color :#ffff99;
+        color :blue;
         box-shadow: 2px 4px white;
     }
       #bt1
   {
-    margin-top: 5vh;
+    margin-top: -5vh;
     margin-left :30vw;
     font-size: 2em;
     background-color:blue;
@@ -111,16 +111,16 @@ body {
       margin-top: 5vh;
       margin-left: -5vw;
       color: white;
-      font-size: 2em;
+      font-size: 1em;
     }
        #id_title{
-        margin-top: 2vh;
+        margin-top: 0vh;
         margin-left: -5vw;
-        width :80vw;
-        height :10vh;
-        color:white;
+        width :60vw;
+        height :8vh;
+        color:blue;
         font-size:1.5em;
-        background-color :#009933;
+        background-color :#ffff99;
         box-shadow: 2px 4px white;
     }
     #des
@@ -128,23 +128,25 @@ body {
       margin-top: 2vh;
       margin-left: 0vw;
       color: white;
-      font-size: 2em;
+      font-size: 1em;
 
     }
 
     #id_memo{
-        margin-top:2vh;
+        position:relative;
+        margin-top:5vh;
         margin-left:-5vw;
-        width :80vw;
-        height :40vh;
-        font-size:1.5m;
-        background-color :#009933;
-        color :white;
+        width :60vw;
+        height :15vh;
+        font-size:1em;
+        background-color :#ffff99;
+        color :blue;
         box-shadow: 2px 4px white;
     }
       #bt1
   {
-    margin-top: 2vh;
+      position:relative;
+    margin-top: 5vh;
     margin-left :20vw;
     font-size: 1.5em;
     background-color:blue;
@@ -152,15 +154,17 @@ body {
   }
   #imp
   {
+      position:relative;
     color:white;
-    margin-left: 30vw;
-    margin-top: -4vh
+    margin-left: 18vw;
+    margin-top: -6vh;
   }
   #id_important
   {
-    margin-top: 8vw;
-    margin-left: 5vw;
-    color: white
+
+
+
+
 
   }
 
@@ -190,9 +194,11 @@ body {
 
                  <h3 id="des" >Description</h3>
                  {{form.memo}}
+                 <br>
 
-                 {{form.important}}
+                    {{form.important}}
                 <h3 id="imp" >Important</h3>
+
 
 
                   <button id="bt1" class="btn btn-success" type="submit">SAVE</button>
